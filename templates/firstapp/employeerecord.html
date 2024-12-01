@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employee index</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontAwesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/firstapp/index.css' %}">
+</head>
+<body>
+   <div class="container">
+    <h1>This in form index.</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+    <input type="submit" value="submit" class="btn btn-primary">
+    </form>
+   </div>
+
+   <script src="{% static 'js/jquery.js' %}"></script>
+   <script src="{% static 'js/popper.js' %}"></script>
+   <script src="{% static 'js/fontAwesome.js' %}"></script>
+   <script src="{% static 'js/bootstrap.js' %}"></script>
+
+</body>
+</html>

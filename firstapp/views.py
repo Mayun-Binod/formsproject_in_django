@@ -21,6 +21,10 @@ def formindex(request):
         if form.is_valid():
             # print("form is valid")
             # print("Name:",form.cleaned_data['ename'])
-            Employee.objects.create(ename=form.cleaned_data['ename'],eno=form.cleaned_data['eno'],esal=form.cleaned_data['esal'],eaddr=form.cleaned_data['eaddr'])
+            # Employee.objects.create(ename=form.cleaned_data['ename'],eno=form.cleaned_data['eno'],esal=form.cleaned_data['esal'],eaddr=form.cleaned_data['eaddr'])
+            form.save(commit=True)
+    form=forms.EmployeeForm()
     context={'form':form}
     return render(request,'firstapp/employeerecord.html',context=context)
+
+
